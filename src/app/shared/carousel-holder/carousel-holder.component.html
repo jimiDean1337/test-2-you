@@ -1,0 +1,18 @@
+<owl-carousel-o [options]="customOptions" (translated)="getData($event)">
+  <ng-container *ngFor="let slide of slidesStore">
+    <ng-template carouselSlide [id]="slide.id">
+      <div class="slider-item" [style.background-image]="'url(' + slide.src + ')'">
+        <div class="overlay"></div>
+        <!-- <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title"> -->
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start">
+            <div class="col-md-6 text tty-animate">
+              <div [innerHTML]="slide.headline | safeHtml"></div>
+              <p><button class="btn btn-secondary px-4 py-3 mt-3">{{slide.action}}</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
