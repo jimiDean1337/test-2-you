@@ -11,15 +11,15 @@ export class CarouselHolderComponent implements OnInit {
   customOptions: OwlOptions = {
     loop: true,
     dots: true,
-    // autoplay: true,
+    autoplay: true,
     autoHeight: false,
     navSpeed: 1200,
     navText: ['', ''],
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
     responsive: {
       0: {
         items: 1,
-        animateIn: '',
-        animateOut: ''
       }
     },
     slideTransition: 'linear',

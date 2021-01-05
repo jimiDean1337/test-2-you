@@ -1,6 +1,6 @@
 <owl-carousel-o [options]="customOptions" (translated)="getData($event)">
   <ng-container *ngFor="let slide of slidesStore">
-    <ng-template carouselSlide [id]="slide.id">
+    <ng-template carouselSlide [id]="slide.id" class="animated slowest">
       <div class="slider-item" [style.background-image]="'url(' + slide.src + ')'">
         <div class="overlay"></div>
         <!-- <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title"> -->

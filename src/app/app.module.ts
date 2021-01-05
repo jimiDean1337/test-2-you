@@ -15,6 +15,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SchedulingComponent } from './pages/scheduling/scheduling.component';
 import { TestingComponent } from './pages/testing/testing.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
+import { CoreModule } from './core/core.module';
+import { BlogComponent } from './pages/blog/blog.component';
+import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,15 @@ import { PricingComponent } from './pages/pricing/pricing.component';
     ContactComponent,
     SchedulingComponent,
     TestingComponent,
-    PricingComponent
+    PricingComponent,
+    BlogComponent,
+    BlogPostComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
+    CoreModule,
     AppRoutingModule,
   ],
   providers: [],
