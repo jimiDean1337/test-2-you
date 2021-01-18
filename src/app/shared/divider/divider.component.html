@@ -1,0 +1,16 @@
+<section class="tty-intro" [style.background-image]="'url(assets/images/' + options.backgroundImage + ')'" [style.background-color]="options.backgroundColor"
+  parallax [config]="{initialValue: 100, ratio: .1}">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <h2>{{options.headline}}</h2>
+        <p class="mb-0">{{options.text}}</p>
+        <p></p>
+      </div>
+      <div class="col-md-3 d-flex align-items-center">
+        <p class="mb-0"><a href="#" class="btn btn-secondary px-4 py-3">{{options.cta}}</a></p>
+      </div>
+    </div>
+  </div>
+</section>

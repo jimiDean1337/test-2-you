@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   // @ViewChild('loader', { static: true }) loader: any;
+  menuOpen = false;
+  constructor() {}
 
-  constructor() {
-
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
-
   ngOnInit(): void {
   }
 

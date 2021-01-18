@@ -1,0 +1,38 @@
+[
+  {
+    "data": [
+      {
+      "id": 1,
+      "src": "assets/images/backgrounds/gloves_manufacturing.jpg",
+      "headline": "<h1 class=\"mb-4\">Convenient<span>COVID-19 testing</span></h1><h3 class=\"subheading\">Get tested at home, school or work, by a highly trained testing professional.</h3>",
+      "action": "Make an appointment",
+      "navigateTo": "scheduling"
+      },
+      {
+      "id": 0,
+      "src": "assets/images/covid_test_ppe.jpg",
+      "headline": "<h1 class=\"mb-4\">For Groups<span>and Individuals</span></h1><h3 class=\"subheading\">Safe & accurate COVID-19 testing, wherever you choose, whenever you choose.</h3>",
+      "action": "Learn more",
+      "navigateTo": "testing"
+      },
+      {
+        "id": 2,
+        "src": "assets/images/backgrounds/testing_temperature.jpg",
+        "headline": "<h1 class=\"mb-4\">Testing at home<span>and the workplace</span></h1><h3 class=\"subheading\">We follow strict PPE guidelines while testing to protect cutomers and employees.</h3>",
+        "action": "Learn more",
+        "navigateTo": "testing"
+      },
+      {
+        "id": 3,
+        "src": "assets/images/backgrounds/covid_testing_gloves.jpg",
+        "headline": "<h1 class=\"mb-4\">Testing at home<span>and the workplace</span></h1><h3 class=\"subheading\">We follow strict PPE guidelines while testing to protect cutomers and employees.</h3>",
+        "action": "Learn more",
+        "navigateTo": "testing"
+      }
+    ],
+    "carouselOptions": {
+      "animateIn": "animate__zoomIn",
+      "animateOut": "animate__slideOutDown"
+    }
+  }
+]

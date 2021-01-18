@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
-// import { ParallaxModule } from 'ngx-parallax';
+import { ParallaxModule } from 'ngx-parallax';
 // import { NgxNewstickerAlbeModule } from 'ngx-newsticker-albe';
 // import { NgxAnimatedGradientModule } from 'ngx-animated-gradient';
 import { AlertModule } from 'ngx-bootstrap/alert';
@@ -21,15 +21,18 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselHolderComponent } from './carousel-holder/carousel-holder.component';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
+import { DividerComponent } from './divider/divider.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 
 
 @NgModule({
-  declarations: [CarouselHolderComponent, SafeHtmlPipe],
+  declarations: [CarouselHolderComponent, SafeHtmlPipe, DividerComponent, TabsComponent],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    ParallaxModule.forRoot(),
     CarouselModule,
     BsDropdownModule.forRoot(),
     AlertModule.forRoot(),
@@ -49,6 +52,7 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    ParallaxModule,
     CarouselModule,
     BsDropdownModule,
     AlertModule,
@@ -64,8 +68,10 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     PaginationModule,
     TimepickerModule,
     CarouselHolderComponent,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    DividerComponent,
+    TabsComponent
   ],
-  entryComponents: [CarouselHolderComponent]
+  entryComponents: [CarouselHolderComponent, DividerComponent, TabsComponent]
 })
 export class SharedModule { }

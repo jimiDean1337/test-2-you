@@ -1,0 +1,181 @@
+[
+  {
+    "data": [
+      {
+        "name": "tests",
+        "title": "Tests",
+        "backgroundImageSrc": "dept-1.jpg",
+        "content": {
+          "title":"Rapid COVID-19 Tests",
+          "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Consectetur deserunt laboris proident laborum occaecat quis mollit.",
+          "list": [
+              {
+              "title": "One",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud.",
+              "icon": "first-aid-kit",
+              "action": ""
+            },
+            {
+              "title": "Two",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud.",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Three",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud.",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Four",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "masks",
+        "title": "Masks",
+        "backgroundImageSrc": "dept-2.jpg",
+        "content": {
+          "title":"Quality Masks",
+          "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu.",
+          "list": [
+              {
+              "title": "One",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid-kit",
+              "action": ""
+            },
+            {
+              "title": "Two",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Three",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Four",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "gloves",
+        "title": "Gloves",
+        "backgroundImageSrc": "dept-3.jpg",
+        "content": {
+          "title":"Nitrile Gloves",
+          "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu.",
+          "list": [
+              {
+              "title": "One",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Two",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Three",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Four",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "gowns",
+        "title": "Gowns",
+        "backgroundImageSrc": "dept-4.jpg",
+        "content": {
+          "title":"Level 1-4 Gowns",
+          "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu.",
+          "list": [
+              {
+              "title": "One",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Two",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Three",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Four",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            }
+          ]
+        }
+      },
+      {
+        "name": "misc",
+        "title": "Misc",
+        "backgroundImageSrc": "dept-5.jpg",
+        "content": {
+          "title":"Popular Items",
+          "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu.",
+          "list": [
+              {
+              "title": "One",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Two",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Three",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            },
+            {
+              "title": "Four",
+              "text": "Dolor dolore pariatur eiusmod nisi enim dolor labore ut laboris commodo tempor eu. Ex eu aute fugiat reprehenderit labore mollit aliquip sunt nostrud. ",
+              "icon": "first-aid",
+              "action": ""
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

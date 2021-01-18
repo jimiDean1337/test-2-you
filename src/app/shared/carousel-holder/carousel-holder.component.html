@@ -1,15 +1,31 @@
-<owl-carousel-o [options]="customOptions" (translated)="getData($event)">
+<owl-carousel-o [options]="customOptions">
   <ng-container *ngFor="let slide of slidesStore">
-    <ng-template carouselSlide [id]="slide.id" class="animated slowest">
-      <div class="slider-item" [style.background-image]="'url(' + slide.src + ')'">
+    <ng-template *ngIf="isHero" carouselSlide [id]="slide.id" class="animated slowest">
+      <div class="slider-item" [style.background-image]="'url(' + slide.src + ')'" parallax [config]="{initialValue: 100, ratio: .5}">
         <div class="overlay"></div>
         <!-- <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title"> -->
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start">
-            <div class="col-md-6 text tty-animate">
+            <div class="col-md-6 text tty-animate" data-aos="fade-up" data-aos-delay="250">
               <div [innerHTML]="slide.headline | safeHtml"></div>
-              <p><button class="btn btn-secondary px-4 py-3 mt-3">{{slide.action}}</button></p>
+              <p><a [owlRouterLink]="[slide.navigateTo]" [hidden]="!slide.action" class="btn btn-secondary px-4 py-3 mt-3">{{slide.action}}</a></p>
             </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template *ngIf="!isHero" carouselSlide class="animated slowest">
+      <div class="item">
+        <div class="testimony-wrap d-flex">
+          <div class="user-img mr-4"  [style.background-image]="'url(assets/images/' + slide.imageSrc + ')'">
+          </div>
+          <div class="text ml-2 bg-light">
+            <span class="quote d-flex align-items-center justify-content-center">
+              <i class="fa fa-quote-left icon-quote-left"></i>
+            </span>
+            <p>{{slide.quote}}</p>
+            <p class="name">{{slide.name}}</p>
+            <span class="position">{{slide.location}}</span>
           </div>
         </div>
       </div>

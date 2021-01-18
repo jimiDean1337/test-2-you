@@ -7,16 +7,17 @@ import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
   styleUrls: ['./carousel-holder.component.scss']
 })
 export class CarouselHolderComponent implements OnInit {
-  @Input() data: any;
-  customOptions: OwlOptions = {
+  @Input() isHero = true;
+  @Input() slidesStore: any[];
+  @Input() customOptions: OwlOptions;
+  activeSlides: SlidesOutputData = null;
+  customOptionsDefaults: OwlOptions = {
     loop: true,
-    dots: true,
     autoplay: true,
+    autoplayHoverPause: true,
     autoHeight: false,
-    navSpeed: 1200,
+    navSpeed: 1500,
     navText: ['', ''],
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
     responsive: {
       0: {
         items: 1,
@@ -24,32 +25,17 @@ export class CarouselHolderComponent implements OnInit {
     },
     slideTransition: 'linear',
     // nav: true
-  }
-  activeSlides: SlidesOutputData = null;
-
-  slidesStore: any[] = [
-    {
-      id: 0,
-      src: '../assets/images/bg_1.jpg',
-      headline: `<h1 class="mb-4">For Groups<span>and Individuals</span></h1>
-              <h3 class="subheading">Safe & accurate COVID-19 testing, wherever you choose, whenever you choose.</h3>`,
-      action: 'Learn more'
-    },
-    {
-      id: 1,
-      src: '../assets/images/bg_2.jpg',
-      headline: `<h1 class="mb-4">Convenient<span>COVID-19 testing</span></h1>
-              <h3 class="subheading">Get tested at home, school or work, by a highly trained testing professional.</h3>`,
-      action: 'Make an appointment'
-    }
-  ];
+  };
   constructor() { }
 
   ngOnInit(): void {
+    const custom = this.customOptions;
+    const defaults = this.customOptionsDefaults;
+    this.customOptions = { ...defaults, ...custom };
   }
-  getData(data: SlidesOutputData) {
-    this.activeSlides = data;
-    console.log(this.activeSlides);
-  }
+  // getData(data: SlidesOutputData) {
+  //   this.activeSlides = data;
+  //   console.log(this.activeSlides);
+  // }
 
 }

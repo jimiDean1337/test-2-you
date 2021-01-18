@@ -1,43 +1,17 @@
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap/scss/variables';
+@import '~font-awesome/scss/font-awesome.scss';
+@import '../assets/fonts/flaticon2/flaticon.css';
+@import '../assets/fonts/flaticon/font/flaticon.css';
+@import '../assets/fonts/ionicons/css/ionicons.min.css';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 @import '~animate.css/animate.css';
+@import '~aos/src/sass/aos.scss';
 @import 'carousel';
-@import '~font-awesome/scss/font-awesome.scss';
-@import '../assets/fonts/flaticon/font/flaticon.css';
-@import '../assets/fonts/ionicons/css/ionicons.min.css';
+@import 'variables';
 
-
-$font-primary: 'Work Sans',
-Arial,
-sans-serif;
-
-$white: #fff;
-$black: #000000;
-// $darken: #3a4348;
-
-$primary: #2f89fc;
-$secondary: #ff8000;
-
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
-
-@mixin transition($transition) {
-  -moz-transition: all $transition ease;
-  -o-transition: all $transition ease;
-  -webkit-transition: all $transition ease;
-  -ms-transition: all $transition ease;
-  transition: all $transition ease;
-}
-
-html {
-}
+html {}
 
 body {
   overflow-x: hidden;
@@ -114,9 +88,11 @@ h5,
   // top: 20px;
   // left: 0;
   // right: 0;
-  z-index: 3;
+  z-index: 1000;
   padding: 0;
-
+  &[data-aos] {
+    pointer-events: auto !important;
+  }
   @include media-breakpoint-down(md) {
     background: $black !important;
     position: relative;
@@ -140,6 +116,7 @@ h5,
   .navbar-nav {
     @include media-breakpoint-down(md) {
       padding-bottom: 10px;
+      z-index: 1000;
     }
 
     >.nav-item {
@@ -259,18 +236,18 @@ h5,
     }
   }
 
-  &.scrolled {
+  &.scrolled{
     position: fixed;
     right: 0;
     left: 0;
     top: 0;
-    margin-top: -130px;
+    // margin-top: -130px;
     background: $white !important;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
 
     .nav-item {
       &.active {
-        >a {
+        >span {
           color: $primary !important;
         }
       }
@@ -657,7 +634,7 @@ h5,
 }
 
 //
-.tty-departments {
+.tty-products {
   position: relative;
   width: 100%;
   display: block;
@@ -684,6 +661,7 @@ h5,
       border: 1px solid transparent;
       background: rgba(0, 0, 0, .05);
       width: 20%;
+      cursor: pointer;
 
       &:after {
         position: absolute;
@@ -769,7 +747,7 @@ h5,
     }
   }
 
-  .departments {
+  .products {
     h2 {
       font-weight: 600;
     }
@@ -1615,6 +1593,7 @@ textarea.form-control {
 
   .owl-dots {
     text-align: center;
+    margin-top: -300px !important;
 
     .owl-dot {
       width: 10px;
@@ -1725,7 +1704,7 @@ textarea.form-control {
     right: 0;
     content: '';
     z-index: -1;
-    opacity: 1;
+    opacity: .75;
     background: $primary;
   }
 }
@@ -1836,7 +1815,7 @@ textarea.form-control {
     .select-wrap,
     .input-wrap {
       position: relative;
-
+      .ng-dirty {}
       select {
         appearance: none;
       }

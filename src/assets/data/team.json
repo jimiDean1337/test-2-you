@@ -1,0 +1,34 @@
+[
+  {
+    "data": [
+      {
+        "name": "Jimi Flynn",
+        "imageSrc": "doc-1.jpg",
+        "title": "CEO/Founder",
+        "description": "I started Test2You to provide affordable, convenient testing to all.",
+        "links": []
+      },
+      {
+        "name": "Kevin Szkolnik",
+        "imageSrc": "doc-2.jpg",
+        "title": "President/Co-Founder",
+        "description": "My experience with Veterans Affairs inspired me to give everyone access to COVID-19 testing.",
+        "links": []
+      },
+      {
+        "name": "Rob Wilske",
+        "imageSrc": "doc-3.jpg",
+        "title": "Guy #1",
+        "description": "Sunt deserunt ea aute officia fugiat nostrud incididunt proident.",
+        "links": []
+      },
+      {
+        "name": "Brian Mcginty",
+        "imageSrc": "doc-4.jpg",
+        "title": "Guy #2",
+        "description": "Sunt deserunt ea aute officia fugiat nostrud incididunt proident.",
+        "links": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "in": [
+      "slideIn",
+      "slideInUp",
+      "slideInLeft",
+      "slideInRight",
+      "fadeIn",
+      "zoomIn",
+      "rubberBand",
+      "swing",
+      "flip",
+      "flipInX",
+      "flipInY"
+    ],
+    "out": [
+      "slideOut",
+      "slideOutUp",
+      "slideOutLeft",
+      "slideOutRight",
+      "fadeOut",
+      "zoomOut",
+      "rubberBand",
+      "swing",
+      "flip",
+      "flipOutX",
+      "flipOutY"
+    ]
+  }
+]

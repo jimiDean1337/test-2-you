@@ -1,0 +1,28 @@
+TODO: Edit Content and Copy: @critical
+  ☐ Home
+  ☐ About
+  ☐ Contact
+  ☐ Scheduling
+  ☐ Testing
+  ☐ Pricing
+  ☐ Blog
+  ☐ Covid Response
+
+TODO: UI/UX:
+  ✔ Mobile Navigation Menu @done(21-01-18 03:36)
+  ☐ Animation
+
+TODO: Functionality:
+  ☐ Consultation Form @high
+  ☐ Login / Account Creation
+
+
+TODO: Services:
+  ☐ Data Service
+    ☐ User
+    ☐ Subscriber
+  ☐ Appontment Service
+    ☐ Scheduling
+    ☐ Appointment Availibility
+
+  ☐ Notification Service

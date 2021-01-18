@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import * as AOS from 'aos';
+// import { ActivatedRoute, Router } from '@angular/router';
+import AOS from 'aos';
 
 @Component({
   selector: 'tty-root',
@@ -9,9 +9,19 @@ import * as AOS from 'aos';
 })
 export class AppComponent implements OnInit {
   title = 'test-to-you';
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
-    AOS.init();
+    AOS.init({
+      useClassNames: true
+    });
+    setTimeout(() => {
+      this.scrollToTop();
+    }, 0)
+  }
+
+  scrollToTop() {
+    return window.scrollTo(0, 0);
   }
 }

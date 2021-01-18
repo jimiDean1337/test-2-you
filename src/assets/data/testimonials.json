@@ -1,0 +1,38 @@
+[
+  {
+    "data": [
+      {
+        "imageSrc": "person_1.jpg",
+        "name": "Rob Smith",
+        "quote": "Cillum anim reprehenderit occaecat dolore occaecat enim ut esse adipisicing sunt aliqua. Do ex mollit consectetur officia dolore excepteur enim. Incididunt commodo ea nisi sunt eu amet eu sit aliquip ad ut tempor adipisicing. Anim culpa pariatur do eiusmod deserunt sint. Adipisicing velit reprehenderit sunt sunt id minim proident.",
+        "location": "Orlando"
+      },
+      {
+        "imageSrc": "person_2.jpg",
+        "name": "Rob Smith",
+        "quote": "Ex ex velit est Lorem culpa nulla dolore in et quis cupidatat labore do. Enim et sit sint enim consectetur proident nisi. Labore id ut irure consectetur laborum commodo nostrud culpa non reprehenderit commodo incididunt. Aliqua amet excepteur ea enim in ipsum reprehenderit nulla velit dolor.",
+        "location": "Orlando"
+      },
+      {
+        "imageSrc": "person_3.jpg",
+        "name": "Rob Smith",
+        "quote": "Nisi dolore ad proident exercitation officia deserunt amet irure commodo magna. Ullamco do ea ad eu enim enim. Excepteur nisi dolore est ut est reprehenderit ad labore consectetur voluptate dolor.",
+        "location": "Orlando"
+      },
+      {
+        "imageSrc": "person_4.jpg",
+        "name": "Rob Smith",
+        "quote": "Ut dolore commodo qui Lorem consectetur voluptate eiusmod. Nisi nulla ea sint in irure magna consequat quis irure veniam incididunt non ad consectetur. Sint mollit voluptate veniam eiusmod amet quis commodo. Nostrud mollit culpa Lorem sunt excepteur non.",
+        "location": "Orlando"
+      }
+    ],
+    "carouselOptions": {
+      "items": 1,
+      "autoplay": true,
+      "autoplaySpeed": 1250,
+      "slideTransition": "ease-out",
+      "animateIn": "animate__slideInRight",
+      "animateOut": "animate__slideOutLeft"
+    }
+  }
+]
