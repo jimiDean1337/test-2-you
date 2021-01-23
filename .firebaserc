@@ -2,10 +2,13 @@
   "targets": {
     "test-2-you": {
       "hosting": {
-        "test-to-you": [
+        "test-2-you": [
           "test-2-you"
         ]
       }
     }
+  },
+  "projects": {
+    "default": "test-2-you"
   }
 }
