@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test-to-you": {
+    "test-2-you": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/test-to-you",
+            "allowedCommonJsDependencies": [
+              "ngx-parallax"
+            ],
+            "outputPath": "dist/test-2-you",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "test-to-you:build"
+            "browserTarget": "test-2-you:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "test-to-you:build:production"
+              "browserTarget": "test-2-you:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "test-to-you:build"
+            "browserTarget": "test-2-you:build"
           }
         },
         "test": {
@@ -119,11 +122,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "test-to-you:serve"
+            "devServerTarget": "test-2-you:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "test-to-you:serve:production"
+              "devServerTarget": "test-2-you:serve:production"
             }
           }
         },
@@ -134,5 +137,5 @@
       }
     }
   },
-  "defaultProject": "test-to-you"
+  "defaultProject": "test-2-you"
 }
