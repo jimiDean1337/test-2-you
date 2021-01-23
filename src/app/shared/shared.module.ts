@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
-import { ParallaxModule } from 'ngx-parallax';
-// import { NgxNewstickerAlbeModule } from 'ngx-newsticker-albe';
-// import { NgxAnimatedGradientModule } from 'ngx-animated-gradient';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -23,6 +20,7 @@ import { CarouselHolderComponent } from './carousel-holder/carousel-holder.compo
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { DividerComponent } from './divider/divider.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -32,7 +30,7 @@ import { TabsComponent } from './tabs/tabs.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ParallaxModule.forRoot(),
+    RouterModule,
     CarouselModule,
     BsDropdownModule.forRoot(),
     AlertModule.forRoot(),
@@ -52,7 +50,6 @@ import { TabsComponent } from './tabs/tabs.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ParallaxModule,
     CarouselModule,
     BsDropdownModule,
     AlertModule,

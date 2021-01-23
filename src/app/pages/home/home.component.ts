@@ -5,6 +5,7 @@ import productsJSON from '../../../assets/data/products.json';
 import teamJSON from '../../../assets/data/team.json';
 import heroSlidesJSON from '../../../assets/data/hero-slides.json';
 import testimonialsJSON from '../../../assets/data/testimonials.json';
+import pricingJSON from '../../../assets/data/pricing.json';
 // import transitionsJSON from '../../../assets/data/transitions.json';
 
 @Component({
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
   heroSlidesOptions: OwlOptions = heroSlidesJSON[0].carouselOptions;
   testimonials = testimonialsJSON[0].data;
   testimonialOptions: OwlOptions = testimonialsJSON[0].carouselOptions;
+  pricing = pricingJSON[0].data;
   // transitionsList: any = transitionsJSON[0];
 
   consultationForm = {

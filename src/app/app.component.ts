@@ -16,9 +16,6 @@ export class AppComponent implements OnInit {
     AOS.init({
       useClassNames: true
     });
-    setTimeout(() => {
-      this.scrollToTop();
-    }, 0)
   }
 
   scrollToTop() {

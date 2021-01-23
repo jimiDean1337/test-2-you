@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params, NavigationError, NavigationStart } from '@angular/router';
 import { Observable } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'tty-loader',
@@ -46,6 +46,10 @@ export class LoaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.navStart.subscribe(obs => {
+      console.log(obs);
+      this.load();
+    })
   }
 
 }

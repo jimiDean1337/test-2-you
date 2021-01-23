@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { NgModule } from '@angular/core';
 import { CountUpModule } from 'ngx-countup';
 import { SharedModule } from './shared/shared.module';
@@ -18,6 +17,7 @@ import { PricingComponent } from './pages/pricing/pricing.component';
 import { CoreModule } from './core/core.module';
 import { BlogComponent } from './pages/blog/blog.component';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
+import { ParallaxModule } from 'ngx-parallax';
 
 @NgModule({
   declarations: [
@@ -38,6 +38,7 @@ import { BlogPostComponent } from './pages/blog-post/blog-post.component';
     BrowserModule,
     BrowserAnimationsModule,
     CountUpModule,
+    ParallaxModule.forRoot(),
     SharedModule,
     CoreModule,
     AppRoutingModule,

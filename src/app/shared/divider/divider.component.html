@@ -1,5 +1,4 @@
-<section class="tty-intro" [style.background-image]="'url(assets/images/' + options.backgroundImage + ')'" [style.background-color]="options.backgroundColor"
-  parallax [config]="{initialValue: 100, ratio: .1}">
+<section class="tty-intro" [style.background-image]="'url(assets/images/' + options.backgroundImage + ')'" [style.background-color]="options.backgroundColor" [style.background-attachment]="'fixed'">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -9,7 +8,7 @@
         <p></p>
       </div>
       <div class="col-md-3 d-flex align-items-center">
-        <p class="mb-0"><a href="#" class="btn btn-secondary px-4 py-3">{{options.cta}}</a></p>
+        <p class="mb-0"><a [routerLink]="['/testing']" class="btn btn-secondary px-4 py-3">{{options.cta}}</a></p>
       </div>
     </div>
   </div>

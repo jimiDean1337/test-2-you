@@ -155,7 +155,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 col-lg-3 tty-animate" data-aos="fade-up" *ngFor="let teamate of team;let i = index;" [style.transition-delay]="i + '00'">
+      <div class="col-md-6 col-lg-3 tty-animate" data-aos="fade-up" *ngFor="let teamate of team;let i = index;" [style.transition-delay]="(i + 1) + '00ms'">
         <div class="staff">
           <div class="img-wrap d-flex align-items-stretch">
             <div class="img align-self-stretch" [style.background-image]="'url(assets/images/'+teamate.imageSrc+')'"></div>
@@ -202,7 +202,7 @@
 <!-- -------------------------------------------------------------------------------- -->
 <!-- START Consultation -->
 <section class="tty-section tty-no-pt tty-no-pb tty-counter img" #counterWrap id="section-counter"
-  style="background-image: url(../assets/images/bg_3.jpg);" parallax [config]="{initialValue: -300, ratio: .1}" data-aos="fade-up">
+  style="background-image: url(../assets/images/bg_3.jpg); background-attachment: fixed;" data-aos="fade-up">
   <div class="container">
     <div class="row">
       <div class="col-md-6 py-5 pr-md-5">
@@ -268,7 +268,7 @@
       <div class="col-lg-6 p-5 bg-counter aside-stretch">
         <h3 class="vr">About Test2You Facts</h3>
         <div class="row pt-4 mt-1">
-          <div class="col-md-6 d-flex justify-content-center counter-wrap tty-animate" data-aos="fade-up">
+          <div class="col-md-6 d-flex justify-content-center counter-wrap tty-animate">
             <div class="block-18 p-5 bg-light">
               <div class="text">
                 <strong [countUp]="1250" class="number">0</strong>
@@ -308,10 +308,10 @@
 <!-- END Consultation -->
 <!-- -------------------------------------------------------------------------------- -->
 <!-- START Pricing -->
-<section class="tty-section bg-light">
+<section class="tty-section pricing-section bg-light">
   <div class="container">
     <div class="row justify-content-center mb-5 pb-2">
-      <div class="col-md-8 text-center heading-section tty-animate">
+      <div class="col-md-8 text-center heading-section" data-aos="fade-up">
         <span class="subheading">Pricing</span>
         <h2 class="mb-4">Our Pricing</h2>
         <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary
@@ -319,68 +319,16 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3 tty-animate">
+      <div *ngFor="let tag of pricing; let i = index;" class="col-md-3" data-aos="fade-up" [style.transition-delay]="(i + 1) + '00ms'">
         <div class="pricing-entry pb-5 text-center">
           <div>
-            <h3 class="mb-4">Basic</h3>
-            <p><span class="price">$24.50</span> <span class="per">/ session</span></p>
+            <h3 class="mb-4">{{tag.type}}</h3>
+            <p><span class="price">${{tag.price}}</span> <span class="per">/ {{tag.unitDescriptor}}</span></p>
           </div>
           <ul>
-            <li>Diagnostic Services</li>
-            <li>Professional Consultation</li>
-            <li>Tooth Implants</li>
-            <li>Surgical Extractions</li>
-            <li>Teeth Whitening</li>
+            <li *ngFor="let attribute of tag.attributes">{{attribute}}</li>
           </ul>
-          <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
-        </div>
-      </div>
-      <div class="col-md-3 tty-animate">
-        <div class="pricing-entry pb-5 text-center">
-          <div>
-            <h3 class="mb-4">Standard</h3>
-            <p><span class="price">$34.50</span> <span class="per">/ session</span></p>
-          </div>
-          <ul>
-            <li>Diagnostic Services</li>
-            <li>Professional Consultation</li>
-            <li>Tooth Implants</li>
-            <li>Surgical Extractions</li>
-            <li>Teeth Whitening</li>
-          </ul>
-          <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
-        </div>
-      </div>
-      <div class="col-md-3 tty-animate">
-        <div class="pricing-entry active pb-5 text-center">
-          <div>
-            <h3 class="mb-4">Premium</h3>
-            <p><span class="price">$54.50</span> <span class="per">/ session</span></p>
-          </div>
-          <ul>
-            <li>Diagnostic Services</li>
-            <li>Professional Consultation</li>
-            <li>Tooth Implants</li>
-            <li>Surgical Extractions</li>
-            <li>Teeth Whitening</li>
-          </ul>
-          <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
-        </div>
-      </div>
-      <div class="col-md-3 tty-animate">
-        <div class="pricing-entry pb-5 text-center">
-          <div>
-            <h3 class="mb-4">Platinum</h3>
-            <p><span class="price">$89.50</span> <span class="per">/ session</span></p>
-          </div>
-          <ul>
-            <li>Diagnostic Services</li>
-            <li>Professional Consultation</li>
-            <li>Tooth Implants</li>
-            <li>Surgical Extractions</li>
-            <li>Teeth Whitening</li>
-          </ul>
-          <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+          <p class="button text-center"><a [routerLink]="['pricing/' + tag.id]" class="btn btn-primary px-4 py-3">Get {{tag.type}} test</a></p>
         </div>
       </div>
     </div>

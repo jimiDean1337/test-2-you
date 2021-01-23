@@ -1,4 +1,4 @@
-TODO: Edit Content and Copy: @critical
+TODO: Content and Copy: @critical
   ☐ Home
   ☐ About
   ☐ Contact
@@ -8,21 +8,45 @@ TODO: Edit Content and Copy: @critical
   ☐ Blog
   ☐ Covid Response
 
-TODO: UI/UX:
-  ✔ Mobile Navigation Menu @done(21-01-18 03:36)
-  ☐ Animation
+TODO: UI/UX: @critical
+  ☐ Element Animation
 
-TODO: Functionality:
-  ☐ Consultation Form @high
-  ☐ Login / Account Creation
+TODO: Functionality: @critical
+  ☐ Consultation Form Submission
+  ☐ Contact Form Submission
+  ☐ Login
+  ☐ New Account
+  ☐ Home
+  ☐ About
+  ☐ Contact
+  ☐ Scheduling
+  ☐ Testing
+  ☐ Pricing
+  ☐ Blog
+  ☐ Covid Response
 
 
-TODO: Services:
-  ☐ Data Service
-    ☐ User
-    ☐ Subscriber
-  ☐ Appontment Service
-    ☐ Scheduling
-    ☐ Appointment Availibility
+TODO: Services: @critical
+  ☐ Data - Handle input/output of Firestore data
+  ☐ User - Handle adding and updating user account
+  ☐ Scheduling - Handle setting and editing user appointments
+  ☐ Notifications - Handle server and client notifications
+  ☐ Payment - Handle payments from customers
+  ☐ Blog - Handle searching and filtering blog posts
+  ☐
 
-  ☐ Notification Service
+TODO: Databases: @critical
+  ☐ Users
+  ☐ Appointment Time Slots
+  ☐ Subscribers
+  ☐ Contacts
+  ☐ Blog
+  ☐ Notifications
+    ☐ Account - New | Updated | Deleted | Payment<Failed:Success:Other>
+    ☐ Consultation - New | Reminder | Canceled | FollowUp
+    ☐ Appointment - New | Reminder | Canceled | Completed | FollowUp
+    ☐ Test Results - Negative | Positive | Other
+    ☐ Support - FeedBack | FollowUp | Other
+
+
+TODO: Widgets:

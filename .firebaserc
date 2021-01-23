@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "test-2-you": {
+      "hosting": {
+        "test-to-you": [
+          "test-2-you"
+        ]
+      }
+    }
+  }
+}

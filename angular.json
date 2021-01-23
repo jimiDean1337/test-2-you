@@ -126,6 +126,10 @@
               "devServerTarget": "test-to-you:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

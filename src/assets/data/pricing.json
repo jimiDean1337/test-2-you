@@ -1,0 +1,58 @@
+[
+  {
+    "data": [
+      {
+        "type": "Basic",
+        "price": 75.00,
+        "unitDescriptor": "person",
+        "attributes": [
+          "One",
+          "Two",
+          "Three",
+          "Four",
+          "Five"
+        ],
+        "id": "basic_test"
+      },
+      {
+        "type": "Urgent",
+        "price": 155.00,
+        "unitDescriptor": "person",
+        "attributes": [
+          "One",
+          "Two",
+          "Three",
+          "Four",
+          "Five"
+        ],
+        "id": "urgent_test"
+      },
+      {
+        "type": "Household",
+        "price": 350.00,
+        "unitDescriptor": "up to 5 members",
+        "attributes": [
+          "One",
+          "Two",
+          "Three",
+          "Four",
+          "Five"
+        ],
+        "id": "household_test"
+      },
+      {
+        "type": "Workplace",
+        "price": 800.00,
+        "unitDescriptor": "up to 15 members",
+        "attributes": [
+          "One",
+          "Two",
+          "Three",
+          "Four",
+          "Five"
+        ],
+        "id": "workplace_test"
+      }
+    ]
+  }
+]

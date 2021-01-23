@@ -12,11 +12,12 @@ export class CarouselHolderComponent implements OnInit {
   @Input() customOptions: OwlOptions;
   activeSlides: SlidesOutputData = null;
   customOptionsDefaults: OwlOptions = {
-    loop: true,
+    autoHeight: false,
     autoplay: true,
     autoplayHoverPause: true,
-    autoHeight: false,
-    navSpeed: 1500,
+    autoplayMouseleaveTimeout: 1250,
+    loop: true,
+    navSpeed: 500,
     navText: ['', ''],
     responsive: {
       0: {
@@ -24,7 +25,6 @@ export class CarouselHolderComponent implements OnInit {
       }
     },
     slideTransition: 'linear',
-    // nav: true
   };
   constructor() { }
 
