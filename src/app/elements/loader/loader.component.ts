@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params, NavigationError, NavigationStart } from '@angular/router';
 import { Observable } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { filter, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'tty-loader',
@@ -14,7 +14,8 @@ export class LoaderComponent implements OnInit {
   navAuthError: Observable<NavigationError>;
   constructor(private router: Router, public route: ActivatedRoute) {
     this.navStart = router.events.pipe(
-      filter(evt => evt instanceof NavigationStart)
+      filter(evt => evt instanceof NavigationStart),
+      tap(() => this.load())
     ) as Observable<NavigationStart>;
     this.navAuthError = router.events.pipe(
       filter(evt => evt instanceof NavigationError)
@@ -31,25 +32,28 @@ export class LoaderComponent implements OnInit {
               relativeTo: this.route
             })
             .then(() => {
-              window.scrollTo(0, 0);
+              this.scrollToTop();
             });
           obs.next(false);
-        }, 1000);
+        }, 750);
       } else {
         setTimeout(() => {
           obs.next(false);
-        }, 1000);
+          this.scrollToTop();
+        }, 750);
       }
     });
-    window.scrollTo(0, 0);
     return false;
   }
 
+  scrollToTop() {
+    const header = document.querySelector('.tty-navbar-light');
+    header.classList.remove('scrolled');
+    window.scroll({ top: 0, behavior: 'smooth'});
+  }
+
   ngOnInit(): void {
-    this.navStart.subscribe(obs => {
-      console.log(obs);
-      this.load();
-    })
+    this.navStart.subscribe();
   }
 
 }

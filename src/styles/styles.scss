@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap/scss/variables';
+@import 'variables';
 @import '~font-awesome/scss/font-awesome.scss';
 @import '../assets/fonts/flaticon2/flaticon.css';
 @import '../assets/fonts/flaticon/font/flaticon.css';
@@ -9,7 +10,6 @@
 @import '~animate.css/animate.css';
 @import '~aos/src/sass/aos.scss';
 @import 'carousel';
-@import 'variables';
 
 html {}
 
@@ -36,6 +36,7 @@ a {
   color: $primary;
 
   &:hover,
+  &:active,
   &:focus {
     text-decoration: none;
     color: $primary;
@@ -90,9 +91,15 @@ h5,
   // right: 0;
   z-index: 1000;
   padding: 0;
+
+  .scrolled-brand {
+    display: none;
+  }
+
   &[data-aos] {
     pointer-events: auto !important;
   }
+
   @include media-breakpoint-down(md) {
     background: $black !important;
     position: relative;
@@ -236,7 +243,7 @@ h5,
     }
   }
 
-  &.scrolled{
+  &.scrolled {
     position: fixed;
     right: 0;
     left: 0;
@@ -244,6 +251,10 @@ h5,
     // margin-top: -130px;
     background: $white !important;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+
+    .scrolled-brand {
+      display: block;
+    }
 
     .nav-item {
       &.active {
@@ -1724,7 +1735,9 @@ textarea.form-control {
     .select-wrap,
     .input-wrap {
       position: relative;
+
       .ng-dirty {}
+
       select {
         appearance: none;
       }

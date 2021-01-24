@@ -212,13 +212,13 @@
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
             blind texts.</p>
         </div>
-        <form autocomplete="off" action="#" class="appointment-form tty-animate">
+        <form #consultation="ngForm" autocomplete="off" class="appointment-form tty-animate">
           <div class="d-md-flex">
             <div class="form-group">
-              <input [(ngModel)]="consultationForm.firstName" name="firstName" id="firstName" type="text" class="form-control" placeholder="First Name">
+              <input [(ngModel)]="consultationForm.firstName" name="firstName" id="firstName" type="text" class="form-control" placeholder="First Name" required>
             </div>
             <div class="form-group ml-md-4">
-              <input [(ngModel)]="consultationForm.lastName" name="lastName" id="lastName" type="text" class="form-control" placeholder="Last Name">
+              <input [(ngModel)]="consultationForm.lastName" name="lastName" id="lastName" type="text" class="form-control" placeholder="Last Name" required>
             </div>
           </div>
           <div class="d-md-flex">
@@ -238,29 +238,29 @@
               </div>
             </div>
             <div class="form-group ml-md-4">
-              <input [(ngModel)]="consultationForm.phone" type="text" name="phone" class="form-control" placeholder="Phone">
+              <input [(ngModel)]="consultationForm.phone" type="text" name="phone" class="form-control" placeholder="Phone" required>
             </div>
           </div>
           <div class="d-md-flex">
             <div class="form-group">
               <div class="input-wrap">
-                <div class="icon"><span class="ion-md-calendar"></span></div>
-                <input [(ngModel)]="consultationForm.date" type="text" bsDatepicker class="form-control appointment_date" name="date" placeholder="Date">
+                <div class="icon" style="font-size: 18px;"><span class="flaticon-calendar-1"></span></div>
+                <input [(ngModel)]="consultationForm.date" type="text" bsDatepicker [bsConfig]="{containerClass: 'theme-dark-blue'}" class="form-control appointment_date" name="date" placeholder="Date" required>
               </div>
             </div>
             <div class="form-group ml-md-4">
               <div class="input-wrap">
-                <div class="icon"><span class="ion-ios-clock"></span></div>
-                <timepicker [(ngModel)]="consultationForm.time" name="time"></timepicker>
+                <div class="icon" style="font-size: 18px;"><span class="flaticon-clock-1"></span></div>
+                <timepicker [(ngModel)]="consultationForm.time" [showSpinners]="false" name="time" required></timepicker>
               </div>
             </div>
           </div>
           <div class="d-md-flex">
             <div class="form-group">
-              <textarea [(ngModel)]="consultationForm.message" name="message" id="message" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+              <textarea [(ngModel)]="consultationForm.message" name="message" id="message" cols="30" rows="2" class="form-control" placeholder="Message" required></textarea>
             </div>
             <div class="form-group ml-md-4">
-              <button class="btn btn-secondary py-3 px-4" (click)="submitConsultationForm(consultationForm)">Submit</button>
+              <button [disabled]="consultation.invalid" class="btn btn-secondary py-3 px-4" (click)="submitConsultationForm(consultationForm, consultation)">Submit</button>
             </div>
           </div>
         </form>

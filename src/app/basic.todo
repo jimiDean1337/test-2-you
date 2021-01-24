@@ -29,9 +29,11 @@ TODO: Functionality: @critical
 TODO: Services: @critical
   ☐ Data - Handle input/output of Firestore data
     ☐ Set collection data
-    ☐ Get collection data by ID
+    ☐ Get collection by name
+    ☐ Set collection item data
+    ☐ Get collection item data by id
     ☐ Update collection item data
-    ☐ Delete collection item
+    ☐ Delete collection item by id
   ☐ User - Handle adding and updating user account
     ☐ Set user data
     ☐ Get user data

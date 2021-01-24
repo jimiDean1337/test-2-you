@@ -21,11 +21,13 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { DividerComponent } from './divider/divider.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { RouterModule } from '@angular/router';
+import { HeroComponent } from './hero/hero.component';
+import { ParallaxModule } from 'ngx-parallax';
 
 
 
 @NgModule({
-  declarations: [CarouselHolderComponent, SafeHtmlPipe, DividerComponent, TabsComponent],
+  declarations: [CarouselHolderComponent, SafeHtmlPipe, DividerComponent, TabsComponent, HeroComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -45,6 +47,7 @@ import { RouterModule } from '@angular/router';
     ProgressbarModule.forRoot(),
     PaginationModule.forRoot(),
     TimepickerModule.forRoot(),
+    ParallaxModule.forRoot(),
   ],
   exports: [
     CommonModule,
@@ -67,8 +70,9 @@ import { RouterModule } from '@angular/router';
     CarouselHolderComponent,
     SafeHtmlPipe,
     DividerComponent,
-    TabsComponent
+    TabsComponent,
+    HeroComponent
   ],
-  entryComponents: [CarouselHolderComponent, DividerComponent, TabsComponent]
+  entryComponents: [CarouselHolderComponent, DividerComponent, TabsComponent, HeroComponent]
 })
 export class SharedModule { }

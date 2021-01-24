@@ -74,8 +74,8 @@
         outline: none !important;
       }
 
-      &.active {
-        background: lighten($black, 70%);
+      &.active span {
+        background: lighten($primary, 70%);
       }
     }
   }
@@ -106,9 +106,11 @@
   height: 100%;
   // max-height: 350px;
   z-index: 0;
+
   .owl-stage-outer {
     height: 600px;
   }
+
   .slider-item {
     background-size: cover;
     background-repeat: no-repeat;
@@ -289,10 +291,14 @@
       height: 10px;
       margin: 5px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, .4);
+      background: lighten($secondary, 70%);
 
-      &.active {
-        background: $white;
+      &.active span {
+        background: $secondary !important;
+      }
+
+      &:hover span {
+        background: lighten($secondary, 20%);
       }
     }
   }
@@ -301,12 +307,13 @@
 .testimony-section {
   .owl-carousel {
     margin: 0;
+
     .owl-stage-outer {
-     height: 300px !important;
-     padding-top: 4em;
-     padding-bottom: 2em;
-     position: relative;
-   }
+      height: 300px !important;
+      padding-top: 4em;
+      padding-bottom: 2em;
+      position: relative;
+    }
   }
 
 
@@ -385,8 +392,12 @@
       border-radius: 50%;
       background: rgba(0, 0, 0, .2);
 
-      &.active {
-        background: $primary;
+      &.active span {
+        background: $primary !important;
+      }
+
+      &:hover span {
+        background: lighten($primary, 20%);
       }
     }
   }

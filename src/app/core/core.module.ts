@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-// import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 
@@ -14,8 +15,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     CommonModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    // AngularFireMessagingModule,
+    AngularFireDatabaseModule,
     AngularFireAnalyticsModule,
+    AngularFireStorageModule,
     AngularFirestoreModule
   ]
 })
