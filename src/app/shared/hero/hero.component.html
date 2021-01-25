@@ -3,8 +3,8 @@
   <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-center">
       <div class="col-md-9 tty-animate text-center">
-        <h1 class="mb-2 bread" data-aos="fade-up" data-aos-delay="1050">{{config.title}}</h1>
-        <p class="breadcrumbs" data-aos="fade-up" data-aos-delay="1350">
+        <h1 class="mb-2 bread" data-aos="fade-up" data-aos-anchor-placement="top top" data-aos-delay="1050">{{config.title}}</h1>
+        <p class="breadcrumbs" data-aos="fade-up" data-aos-anchor-placement="top top" data-aos-delay="1350">
           <span class="mr-2" *ngFor="let crumb of config.breadcrumbs">
             <a [routerLink]="[crumb.link]">{{crumb.name}} <i class="ion-ios-arrow-forward"></i>
             </a>

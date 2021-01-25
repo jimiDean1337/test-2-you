@@ -12,31 +12,52 @@ import { TestingComponent } from './pages/testing/testing.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {
+      id: 0
+    }
   },
   {
     path: 'scheduling',
-    component: SchedulingComponent
+    component: SchedulingComponent,
+    data: {
+      id: 1
+    }
   },
   {
     path: 'testing',
-    component: TestingComponent
+    component: TestingComponent,
+    data: {
+      id: 4
+    }
   },
   {
     path: 'pricing',
-    component: PricingComponent
+    component: PricingComponent,
+    data: {
+      id: 5
+    }
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    data: {
+      id: 2
+    }
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
+    data: {
+      id: 3
+    }
   },
   {
     path: 'blog',
-    component: BlogComponent
+    component: BlogComponent,
+    data: {
+      id: 6
+    }
   },
   {
     path: 'blog-post',

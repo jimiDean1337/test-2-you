@@ -11,28 +11,10 @@ export class CarouselHolderComponent implements OnInit {
   @Input() slidesStore: any[];
   @Input() customOptions: OwlOptions;
   activeSlides: SlidesOutputData = null;
-  customOptionsDefaults: OwlOptions = {
-    autoHeight: false,
-    autoplay: true,
-    autoplayHoverPause: true,
-    autoplayMouseleaveTimeout: 1250,
-    loop: true,
-    navSpeed: 500,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1,
-      }
-    },
-    slideTransition: 'linear',
-  };
+  customOptionsDefaults: OwlOptions = {};
   constructor() { }
 
-  ngOnInit(): void {
-    const custom = this.customOptions;
-    const defaults = this.customOptionsDefaults;
-    this.customOptions = { ...defaults, ...custom };
-  }
+  ngOnInit(): void {}
   // getData(data: SlidesOutputData) {
   //   this.activeSlides = data;
   //   console.log(this.activeSlides);

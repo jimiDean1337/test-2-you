@@ -1,6 +1,7 @@
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap/scss/variables';
 @import 'variables';
+@import 'node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 @import '~font-awesome/scss/font-awesome.scss';
 @import '../assets/fonts/flaticon2/flaticon.css';
 @import '../assets/fonts/flaticon/font/flaticon.css';
@@ -10,6 +11,12 @@
 @import '~animate.css/animate.css';
 @import '~aos/src/sass/aos.scss';
 @import 'carousel';
+
+.hamburger {
+  &:focus {
+    outline: none !important;
+  }
+}
 
 html {}
 
@@ -83,13 +90,17 @@ h5,
   }
 }
 
+.tty_navbar {
+  z-index: 1001;
+}
+
 .tty-navbar-light {
-  background: transparent !important;
+  background: darken($white, 20%) !important;
   // position: absolute;
   // top: 20px;
   // left: 0;
   // right: 0;
-  z-index: 1000;
+  z-index: 1001;
   padding: 0;
 
   .scrolled-brand {
@@ -124,6 +135,7 @@ h5,
     @include media-breakpoint-down(md) {
       padding-bottom: 10px;
       z-index: 1000;
+      height: 100vh;
     }
 
     >.nav-item {
@@ -139,7 +151,12 @@ h5,
         cursor: pointer;
 
         &:hover {
-          color: $black;
+          color: lighten($secondary, 10%);
+        }
+
+        &.active,
+        &:active {
+          color: $secondary !important;
         }
 
         opacity: 1 !important;
@@ -249,8 +266,8 @@ h5,
     left: 0;
     top: 0;
     // margin-top: -130px;
-    background: $white !important;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    // background: darken(#FFFFFF, 20%) !important;
+    box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.24);
 
     .scrolled-brand {
       display: block;
@@ -315,7 +332,7 @@ h5,
     .nav-link {
       padding-top: .9rem !important;
       padding-bottom: .9rem !important;
-      color: $black !important;
+      color: lighten($black, 30%) !important;
 
       &.active {
         color: $primary !important;
@@ -2228,4 +2245,8 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px;
   }
+}
+
+#scrollToTop {
+  z-index: 999;
 }

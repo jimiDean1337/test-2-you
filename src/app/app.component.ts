@@ -14,7 +14,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     AOS.init({
-      useClassNames: true
+      useClassNames: true,
+      once: true
     });
   }
 

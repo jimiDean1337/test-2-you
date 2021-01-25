@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params, NavigationError, NavigationStart } from '@angular/router';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { filter, map, tap } from 'rxjs/operators';
 
 @Component({
@@ -12,7 +12,9 @@ export class LoaderComponent implements OnInit {
   loading: Observable<boolean>;
   navStart: Observable<NavigationStart>;
   navAuthError: Observable<NavigationError>;
+  activeLink: BehaviorSubject<number>;
   constructor(private router: Router, public route: ActivatedRoute) {
+    // this.activeLink = new BehaviorSubject(null);
     this.navStart = router.events.pipe(
       filter(evt => evt instanceof NavigationStart),
       tap(() => this.load())
@@ -27,29 +29,29 @@ export class LoaderComponent implements OnInit {
       obs.next(true);
       if (url) {
         setTimeout(() => {
+          this.scrollToTop();
           this.router
             .navigate([url], {
               relativeTo: this.route
-            })
-            .then(() => {
-              this.scrollToTop();
             });
           obs.next(false);
-        }, 750);
+        }, 1250);
       } else {
         setTimeout(() => {
-          obs.next(false);
           this.scrollToTop();
-        }, 750);
+          obs.next(false);
+        }, 1250);
       }
     });
     return false;
   }
 
   scrollToTop() {
-    const header = document.querySelector('.tty-navbar-light');
-    header.classList.remove('scrolled');
     window.scroll({ top: 0, behavior: 'smooth'});
+    const header = document.querySelector('.navbar-collapse');
+    const headerNav = document.querySelector('.tty-navbar-light');
+    headerNav.classList.remove('collapse')
+    header.classList.remove('scrolled');
   }
 
   ngOnInit(): void {

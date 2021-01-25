@@ -291,14 +291,14 @@
       height: 10px;
       margin: 5px;
       border-radius: 50%;
-      background: lighten($secondary, 70%);
+      background: lighten($primary, 70%);
 
       &.active span {
-        background: $secondary !important;
+        background: $primary !important;
       }
 
       &:hover span {
-        background: lighten($secondary, 20%);
+        background: lighten($primary, 20%);
       }
     }
   }
